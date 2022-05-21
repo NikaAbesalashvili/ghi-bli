@@ -1,12 +1,18 @@
 import './App.css';
 
-import Films from './components/Films/Films';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Films from './pages/Films/Films';
 
 function App() {
+
     return (
-        <div className="App">
-            <Films />
-        </div>
+        <BrowserRouter>
+            <div className="App">
+                <Routes>
+                    <Route path='/films' element={<Films/>} />
+                </Routes>
+            </div>
+        </BrowserRouter>
     );
 };
 
