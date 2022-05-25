@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material';
+import { Grid, CircularProgress } from '@mui/material';
 
 import AnimeCard from "../../components/AnimeCard/AnimeCard";
 import { useFilms } from './hooks/useFilms';
@@ -10,23 +10,24 @@ const Films = () => {
     return (
         <>
             {!films.length ? (
-                'LOADING MOVIES'
+                <CircularProgress sx={{ margin: '2rem 0' }} />
             ) : (
                 <Grid
                     container
                     alignItems='stretch'
                     spacing={4}
                     paddingX={2}
-                    marginTop={1}
+                    marginY={2}
                 >
 
-                    {films.map((film) => (
+                    {films.map(({ id, movie_banner, title, original_title, description }) => (
                         <AnimeCard
-                            key={film.id}
-                            imageUrl={film.image}
-                            animeTitle={film.title}
-                            animeOriginalTitle={film.original_title}
-                            animeDescription={film.description}
+                            key={id}
+                            animeId={id}
+                            animeBannerUrl={movie_banner}
+                            animeTitle={title}
+                            animeOriginalTitle={original_title}
+                            animeDescription={description}
                         />
                     ))}
 
