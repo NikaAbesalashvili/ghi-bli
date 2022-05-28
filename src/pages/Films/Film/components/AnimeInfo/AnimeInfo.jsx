@@ -35,7 +35,7 @@ const AnimeInfo = ({
                 align='center'
                 gutterBottom
             >
-                Duration: {duration}M
+                Duration: {duration}m
             </Typography>
 
             <Typography

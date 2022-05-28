@@ -1,5 +1,5 @@
 import { Typography, CircularProgress } from '@mui/material';
-import AnimeBanner from '../../../components/AnimeBanner/AnimeBanner';
+import AnimeBanner from './components/AnimeBanner/AnimeBanner';
 import AnimeInfo from './components/AnimeInfo/AnimeInfo';
 import AnimeInfoBox from './components/AnimeInfoBox/AnimeInfoBox';
 

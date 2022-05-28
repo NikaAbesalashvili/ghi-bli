@@ -3,8 +3,8 @@ import axios from 'axios';
 const API = axios.create({ baseURL: 'https://ghibliapi.herokuapp.com' });
 
 // FILMS
-export const getFilms = () => API.get('/films')
-export const getFilm = (filmId) => API.get(`/films/${filmId}`)
+export const getFilms = () => API.get('/films');
+export const getFilm = (filmId) => API.get(`/films/${filmId}`);
 
 // PEOPLE
 export const getPeople = () => API.get('/people');
